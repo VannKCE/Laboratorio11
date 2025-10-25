@@ -1,23 +1,23 @@
-let numero = parseInt(prompt("Ingrese un número para verificar si es Armstrong:"));
-let numeroOriginal = numero;
-let cantidadDigitos = String(numero).length;
-let suma = 0;
+let N = parseInt(prompt("Ingrese un número para verificar si es Armstrong:"));
+let numeroOriginal = N;
+let cantidadDigitos = String(N).length;
+let sumas = 0;
 
-while (numero > 0) {
-    let digito = numero % 10;
+while (N > 0) {
+    let digito = N % 10;
     let potencia = 1;
 
     for (let i = 0; i < cantidadDigitos; i++) {
         potencia = Math.pow(digito, cantidadDigitos);
     }
 
-    suma += potencia;
-    numero = parseInt(numero / 10); 
+    sumas += potencia;
+    N = parseInt(N / 10); 
 }
 
 console.log("Número ingresado: " + numeroOriginal);
 
-if (suma === numeroOriginal) {
+if (sumas === numeroOriginal) {
     console.log(numeroOriginal + " es un número Armstrong.");
 } else {
     console.log(numeroOriginal + " no es un número Armstrong.");

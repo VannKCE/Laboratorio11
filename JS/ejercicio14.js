@@ -1,5 +1,5 @@
 let presupuesto = Number(prompt("Ingrese su presupuesto:"));
-let total = 0;
+let total2 = 0;
 let continuar = true;
 
 while (continuar) {
@@ -10,11 +10,11 @@ while (continuar) {
         continue;
     }
 
-    if (total + precio > presupuesto) {
+    if (total2 + precio > presupuesto) {
         console.log("No puede agregar este producto. Se excede del presupuesto.");
         continuar = false;
     } else {
-        total += precio;
+        total2 += precio;
 
         let respuesta = prompt("¿Desea agregar otro producto? (s/n):").toLowerCase();
         if (respuesta !== "s") {
@@ -23,14 +23,14 @@ while (continuar) {
     }
 }
 
-console.log("Total: S/ " + total.toFixed(2));
+console.log("Total: S/ " + total2.toFixed(2));
 
-if (total > 100) {
+if (total2 > 100) {
     console.log("Tiene un descuento del 10%.");
-    total -= total * 0.10;
-} else if (total >= 50) {
+    total2 -= total2 * 0.10;
+} else if (total2 >= 50) {
     console.log("Gana un cupón de 5%.");
-    total -= total * 0.05;
+    total2 -= total2 * 0.05;
 } else {
     console.log("No aplica descuento.");
 }
