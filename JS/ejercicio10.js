@@ -1,23 +1,24 @@
+const PI = 3.1416;
 let opcion = 0;
-const pi = 3.1416;
 
 while (opcion !== 3) {
-    console.log("\n--- MENÚ DE ÁREAS ---");
-    console.log("1. Calcular área del círculo");
-    console.log("2. Calcular área del rectángulo");
-    console.log("3. Salir");
-
-    opcion = Number(prompt("Ingrese una opción:"));
+    opcion = parseInt(prompt(
+        "MENÚ\n" + "1. Calcular área del círculo\n" +
+        "2. Calcular área del rectángulo\n" + "3. Salir\n\n" +
+        "Ingrese una opción:"
+    ));
 
     if (opcion === 1) {
-        let radio = Number(prompt("Ingrese el radio del círculo:"));
-        let area = pi * radio * radio;
+        let radio = parseFloat(prompt("Ingrese el radio del círculo:"));
+        let area = PI * Math.pow(radio, 2);
         console.log("El área del círculo es: " + area.toFixed(2));
+
     } else if (opcion === 2) {
-        let base = Number(prompt("Ingrese la base del rectángulo:"));
-        let altura = Number(prompt("Ingrese la altura del rectángulo:"));
+        let base = parseFloat(prompt("Ingrese la base del rectángulo:"));
+        let altura = parseFloat(prompt("Ingrese la altura del rectángulo:"));
         let area = base * altura;
         console.log("El área del rectángulo es: " + area.toFixed(2));
+
     } else if (opcion === 3) {
         console.log("Saliendo.");
     } else {
