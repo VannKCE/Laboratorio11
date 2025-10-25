@@ -1,13 +1,11 @@
 let n = parseInt(prompt("Ingrese un número: "))
 
 let suma = 0;
-let i=1;
-while(i <= n){
-    if (i % 5 == 0) {
-        continue;
-    } else {
-        suma += i;
-    }
+
+for (let i = 1; i <= n; i++) {
+  if (i % 5 != 0) {
+    suma += i;
+  }
 }
 
-console.log("La suma de número de 1 hasta " + n + " es: " + i);
+console.log("La suma (sin múltiplos de 5) es: " + suma);
