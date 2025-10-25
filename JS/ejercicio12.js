@@ -50,7 +50,7 @@ while (opcion2 !== 4) {
         }
 
     } else if (opcion2 === 4) {
-        console.log("Saliendo del programa...");
+        console.log("Saliendo.");
     } else {
         console.log("Opción inválida. Intente nuevamente.");
     }

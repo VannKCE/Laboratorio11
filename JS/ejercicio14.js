@@ -35,4 +35,4 @@ if (total2 > 100) {
     console.log("No aplica descuento.");
 }
 
-console.log("Total a pagar: S/ " + total.toFixed(2));
+console.log("Total a pagar: S/ " + total2.toFixed(2));
